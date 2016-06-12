@@ -1,0 +1,45 @@
+.navbar {
+    height: 80px;
+    margin: 0px;
+    background-color: white;
+    border-bottom:3px solid;
+}
+.navbar-brand {
+    font-size: 50px;
+    padding:30px 15px;
+}
+.navbar-form {
+    padding:25px 15px;
+    margin:0px;
+}
+#avatar-navbar {
+    height: 75px;
+    padding: 5px 15px 5px 70px;
+    
+}
+.log {
+    padding:15px 15px;
+}
+#ask {
+    background-color: RGB(15, 255, 227);
+}
+.navbar-form {
+    padding-left: 100px;
+}
+.link-header {
+    font-size: 30px;
+    color: blue;
+}
+.text_align {
+    line-height: 80%;
+    font-size: 15px;
+}
+.img-rounded {
+    padding-top:20px;
+    padding-left: 0px;
+}
+.blocks {
+    border:1px solid black;
+    padding: 15px;
+    margin-top: 20px;
+}

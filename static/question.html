@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+                    <meta name="description" content="">
+                        <meta name="author" content="">
+                            <link rel="icon" href="../../favicon.ico">
+                                
+                                <title>Starter Template for Bootstrap</title>
+                                
+                                <!-- Bootstrap core CSS -->
+                                <link href="../css/bootstrap.min.css" rel="stylesheet">
+                                    <link href="../css/new.css" rel="stylesheet">
+                                    
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="col-md-3">
+                <a class="navbar-brand" href="#">AskPupkin</a>
+            </div>
+            <div class="col-md-4">
+                <form class="navbar-form" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default" id="ask">Ask!</button>
+                </form>
+            </div>
+            <div class="col-md-2 log col-md-offset-3" style='padding-top:30px;'>
+                <a style='margin-right:20px;'  href="#">log in</a>
+                <a href="#">register</a>
+            </div>
+        </nav>
+        
+        <div class="col-md-8" style='padding-left:30px;'>
+            <h1>New Question</h1>
+            <label for="title" class="col-md-2 control-label">Title</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" style='margin-bottom:20px;' id="title" placeholder="Title">
+            </div>
+            <label for="text" class="col-md-2 control-label">Text</label>
+            <div class="col-md-10">
+                <textarea class="form-control" style='margin-bottom:20px; height:300px;' id="title" placeholder="Text"></textarea>
+            </div>
+            <label for="tags" class="col-md-2 control-label">Tags</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" style='margin-bottom:20px;' id="title" placeholder="Tags">
+            </div>
+            <div class="col-md-offset-2" style='padding-left:15px;'>
+                <button type="submit" class="btn btn-default" id="ask">Ask!</button>
+            </div>
+        </div>
+        
+      <div  class="col-md-4" style='padding-top: 40px; padding-left: 20px;'>
+          <h1>Popular Tags</h1>
+          <p style='word-spacing: 20px;'>
+            <a href="#" style='font-size: 15px; color: black'>perl</a>
+            <a href="#" style='font-size: 17px; color: red'>python</a>
+            <a href="#" style='font-size: 16px; color: black'>TechnoPark</a>
+          </p>
+          <p style='word-spacing: 20px;'>
+            <a href="#" style='font-size: 30px; color: red'>MySQL</a>
+            <a href="#" style='font-size: 20px; color: green'>django</a>
+          </p>
+          <p style='word-spacing: 20px;'>
+            <a href="#" style='font-size: 20px; color: orange'>Mail.Ru</a>
+            <a href="#" style='font-size: 18px; color: black'>Voloshin</a>
+            <a href="#" style='font-size: 19px; color: blue'>Firefox</a>
+          </p>
+          <h1>Best Members</h1>
+            <p><a href="#" style='font-size: 20px;'>Mr. Freeman</a></p>
+            <p><a href="#" style='font-size: 20px;'>Dr. House</a></p>
+            <p><a href="#" style='font-size: 20px;'>Bender</a></p>
+            <p><a href="#" style='font-size: 20px;'>Queen Victoria</a></p>
+            <p><a href="#" style='font-size: 20px;'>V. Pupkin</a></p>
+      </div>
+      
+
+                <!-- Bootstrap core JavaScript
+         ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+        <script src="bootstrap.min.js"></script>
+    </body>
+</html>

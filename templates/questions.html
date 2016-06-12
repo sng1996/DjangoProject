@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block inside_main %}
+	{% for question in questions %}
+	<div class="col-md-12 blocks">
+                <div class="col-md-3">
+                    <img src="/man.png" alt="Avatar" class="img-rounded">
+                    <input type="number" min="1" max="20" step="1" style='margin-left: 40px; height: 40px; width: 60px; padding-left: 10px;'/>
+                </div>
+                <div class="col-md-9">
+                    <a class="link-header" href="{% url 'answer' question.id%}">{{ question.title }}</a>
+                    <div class="text_align">
+                        <br>{{ question.body }}</br>
+                        <div style='padding-top:50px;'>
+                        <a href="#">answer (3)</a>
+                        <basefont>Tags: </basefont>
+                        <a href="#">{{ question.tag_set.name }}</a>
+                        <a href="#">bender</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	{% endfor %}
+	{% if questions.paginator.num_pages > 1 %}	
+		<ul class="pagination">
+			{%if questions.has_previous %}
+				<li><a href="?page={{ questions.previous_page_number }}" aria-label="Previous">&laquo;</a></li>
+			{%endif%}
+			<li>
+				{% for pn in questions.paginator.page_range %}
+					<a href="?page={{ pn }}">{{ pn }}</a>
+				{% endfor %}
+			</li>
+			{%if questions.has_next %}
+                                <li><a href="?page={{ questions.next_page_number }}" aria-label="Next">&raquo;</a></li>
+                        {%endif%}
+		</ul>
+	{% endif %} 
+{% endblock %}

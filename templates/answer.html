@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block inside_main %}            
+            <div class="col-md-12" style='border-bottom: 3px solid;'>
+                <div class="col-md-3">
+                    <img src="/man.png" alt="Avatar" class="img-rounded">
+                    <input type="number" min="1" max="20" step="1" style='margin-left: 40px; height: 40px; width: 60px; padding-left: 10px;'/>
+                </div>
+                <div class="col-md-9">
+                    <a class="link-header" href="#">{{ question.title }}</a>
+                    <div class="text_align">
+                        <p style='line-height: 120%;'>{{ question.body }}</p>
+                        <div style='margin-top:20px; margin-bottom:20px;'
+                            <basefont>Tags: </basefont>
+                            <a href="#">black-jack</a>
+                            <a href="#">bender</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		
+	{% for answer in answers %}
+            <div class="col-md-12 blocks">
+                <div class="col-md-3">
+                    <img src="/man.png" alt="Avatar" class="img-rounded">
+                    <input type="number" min="1" max="20" step="1" style='margin-left: 40px; height: 40px; width: 60px; padding-left: 10px;'/>
+                </div>
+                <div class="col-md-9">
+                    <div class="text_align">
+                        <p style='line-height: 120%;'>{{ answer.text }}</p>
+                        <div style='margin-top:20px; margin-bottom:20px;'>
+                            <input type="checkbox" name="option1" value="a1" style='margin-right:10px;'>Correct!</input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	{% endfor %}
+	<form action="/question/{{ question.id }}/" method="POST">
+		{% csrf_token %}
+		{% for f in form.visible_fields %}		
+                	<div class="col-md-12" style='border-bottom: 3px solid; padding: 0px; margin-bottom: 20px;margin-top: 20px;'>
+				{{ f }}
+           		</div>
+		{% endfor %}
+            	<button type="submit" class="btn btn-default" style='margin-bottom: 20px;' id="Answer">Answer</button>
+	</form>
+{% endblock %}
